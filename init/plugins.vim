@@ -113,6 +113,8 @@ if dein#load_state('~/.cache/dein')
     call dein#add('fatih/vim-go')
     "all dein#add('stamblerre/gocode')
 
+    " toml support
+    call dein#add('cespare/vim-toml')
 
     "auto read
     "call dein#add('djoshea/vim-autoread')
