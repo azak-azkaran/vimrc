@@ -125,7 +125,7 @@ map <F4> :VimuxInterruptRunner<CR>
 map <F5> :NERDTreeToggle<CR>
 
 " starts Ctag
-map <F6> :Ctag<CR>
+map <F6> :TagbarToggle<CR>
 
 
 " starts terminal
