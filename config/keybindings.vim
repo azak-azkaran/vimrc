@@ -127,7 +127,6 @@ map <F5> :NERDTreeToggle<CR>
 " starts Ctag
 map <F6> :TagbarToggle<CR>
 
-
 " starts terminal
 map <F7> :terminal<CR>
 
