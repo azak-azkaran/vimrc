@@ -106,7 +106,8 @@ if dein#load_state('~/.cache/dein')
     " call dein#add('chr4/nginx.vim')
 
     " better yaml support
-    call dein#add('chase/vim-ansible-yaml')
+    "call dein#add('chase/vim-ansible-yaml')
+    call dein#add( 'pearofducks/ansible-vim')
 
     " go support"
     call dein#add('sebdah/vim-delve')
