@@ -4,7 +4,7 @@ let g:deoplete#sources#jedi#show_docstring = 1
 
 "let g:deoplete#sources#go#gocode_binary = '/home/andy/go/bin/gocode'
 let g:LanguageClient_serverCommands = {
-            \ 'go': ['~/go/bin/gopls'],
+            \ 'go': ['gopls'],
             \ 'dart': ['dart','/usr/lib/dart/bin/snapshots/analysis_server.dart.snapshot','--lsp']
             \ }
 "call deoplete#custom#option('smart_case', v:true)
