@@ -47,7 +47,7 @@ if dein#load_state('~/.cache/dein')
     call dein#add('junegunn/fzf.vim')
 
     " tagbar using ctags
-    call dein#add('majutsushi/tagbar')
+    call dein#add('preservim/tagbar')
 
     " linting with neomake
     call dein#add('neomake/neomake')

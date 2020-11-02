@@ -5,11 +5,11 @@ let g:deoplete#sources#jedi#show_docstring = 1
 "let g:deoplete#sources#go#gocode_binary = '/home/andy/go/bin/gocode'
 let g:LanguageClient_serverCommands = {
             \ 'go': ['gopls'],
-            \ 'dart': ['dart','/usr/lib/dart/bin/snapshots/analysis_server.dart.snapshot','--lsp']
+            \ 'dart': ['dart','/usr/lib/dart/bin/snapshots/analysis_server.dart.snapshot','--lsp'],
             \ }
 "call deoplete#custom#option('smart_case', v:true)
 "
-
+let g:LanguageClient_loggingFile = expand('~/LanguageClient.log')
 
 "  omnifuncs
 set omnifunc=syntaxcomplete#Complete
@@ -23,3 +23,25 @@ augroup omnifuncs
 augroup end
 
 
+"let settings = json_decode('
+"\{
+"\    "yaml": {
+"\        "completion": true,
+"\        "hover": true,
+"\        "validate": true,
+"\        "schemas": {
+"\            "Kubernetes": "/*"
+"\        },
+"\        "format": {
+"\            "enable": true
+"\        }
+"\    },
+"\    "http": {
+"\        "proxyStrictSSL": true
+"\    }
+"\}')
+"augroup LanguageClient_config
+"    autocmd!
+"    autocmd User LanguageClientStarted call LanguageClient#Notify(
+"        \ 'workspace/didChangeConfiguration', {'settings': settings})
+"augroup END
