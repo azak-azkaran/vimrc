@@ -6,6 +6,7 @@ let g:deoplete#sources#jedi#show_docstring = 1
 let g:LanguageClient_serverCommands = {
             \ 'go': ['gopls'],
             \ 'dart': ['dart','/usr/lib/dart/bin/snapshots/analysis_server.dart.snapshot','--lsp'],
+            \     'python' : ['pyls'],
             \ }
 "call deoplete#custom#option('smart_case', v:true)
 "
