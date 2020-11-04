@@ -13,6 +13,9 @@ set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 set runtimepath+=~/.fzf
 
 execute 'source' '~/.vimrc/init/plugins.vim'
+
+let mapleader = ","
+
 for f in split(glob('~/.vimrc/config/*.vim'), '\n')
     exe 'source' f
 endfor

@@ -13,11 +13,12 @@ if dein#load_state('~/.cache/dein')
     " Dein update ui call with ":DeinUpdate"
     call dein#add('wsdjeg/dein-ui.vim')
     " Add or remove your plugins here:
+    "
     " for snipppes
-    call dein#add('Shougo/neosnippet.vim')
-    call dein#add('Shougo/neosnippet-snippets')
-    " popular snippets
-    call dein#add('honza/vim-snippets')
+    "call dein#add('Shougo/neosnippet.vim')
+    "call dein#add('Shougo/neosnippet-snippets')
+    "" popular snippets
+    "call dein#add('honza/vim-snippets')
 
     call dein#add('scrooloose/nerdtree')
     call dein#add('tpope/vim-surround')
@@ -27,21 +28,25 @@ if dein#load_state('~/.cache/dein')
     call dein#add('tpope/vim-fugitive')
     call dein#add('gregsexton/gitv')
 
-    " autocompletion
-    call dein#add('Shougo/deoplete.nvim')
-    " tmux autocompletion
-    call dein#add('wellle/tmux-complete.vim')
-    " Jedi autocompletion
-    call dein#add('zchee/deoplete-jedi')
-    " Clang autocompletion
-    call dein#add('zchee/deoplete-clang')
-    " java deoplete
-    call dein#add('artur-shaik/vim-javacomplete2')
-    " tabnine support
-    call dein#add('tbodt/deoplete-tabnine', {'build': './install.sh'})
+    "    " autocompletion
+    "    call dein#add('Shougo/deoplete.nvim')
+    "    " tmux autocompletion
+    "    call dein#add('wellle/tmux-complete.vim')
+    "    " Jedi autocompletion
+    "    call dein#add('zchee/deoplete-jedi')
+    "    " Clang autocompletion
+    "    call dein#add('zchee/deoplete-clang')
+    "    " java deoplete
+    "    call dein#add('artur-shaik/vim-javacomplete2')
+    "    " tabnine support
+    "    call dein#add('tbodt/deoplete-tabnine', {'build': './install.sh'})
 
     " Autocompletion with Languages servers
-    call dein#add('autozimu/LanguageClient-neovim', {'rev': 'next','build': './install.sh'})
+    "call dein#add('autozimu/LanguageClient-neovim', {'rev': 'next','build': './install.sh'})
+    "
+
+    " Autocompletion with Languages servers and plugins
+    call dein#add('neoclide/coc.nvim', { 'merged': 0, 'rev': 'release' })
 
     " fzf
     call dein#add('junegunn/fzf.vim')
