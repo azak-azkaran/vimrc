@@ -14,3 +14,4 @@ command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-h
 
 " map find to rg
 map <leader>rg :Find
+map <leader>f :FZF
