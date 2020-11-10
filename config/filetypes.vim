@@ -12,3 +12,18 @@ au! BufRead,BufNewFile *.markdown set filetype=markdown
 au! BufRead,BufNewFile *.md       set filetype=markdown
 "au BufNewFile,BufReadPost *.md set filetype=markdown
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'sql', 'yaml']
+
+" teat template files like yaml files
+au BufRead,BufNewFile *.yaml.j2       set filetype=yaml
+au BufRead,BufNewFile *.yml.j2       set filetype=yaml
+
+au FileType xml setlocal foldmethod=syntax
+" to auto load and auto save folds
+au BufWinLeave *.* mkview
+
+
+" call Neoformat on w
+augroup fmt
+    autocmd!
+    autocmd BufWritePre * undojoin | Neoformat
+augroup END

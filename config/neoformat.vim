@@ -10,13 +10,6 @@ let g:neoformat_basic_format_retab = 1
 let g:neoformat_basic_format_trim = 1
 "let g:neoformat_enabled_golang = ['goimports']
 
-" call Neoformat on w
-augroup fmt
-    autocmd!
-    autocmd BufWritePre * undojoin | Neoformat
-augroup END
-
-
 " Neomake auto linting
 " When writing a buffer (no delay).
 call neomake#configure#automake('w')
