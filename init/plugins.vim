@@ -12,13 +12,6 @@ if dein#load_state('~/.cache/dein')
 
     " Dein update ui call with ":DeinUpdate"
     call dein#add('wsdjeg/dein-ui.vim')
-    " Add or remove your plugins here:
-    "
-    " for snipppes
-    "call dein#add('Shougo/neosnippet.vim')
-    "call dein#add('Shougo/neosnippet-snippets')
-    "" popular snippets
-    "call dein#add('honza/vim-snippets')
 
     call dein#add('scrooloose/nerdtree')
     call dein#add('tpope/vim-surround')
@@ -27,23 +20,6 @@ if dein#load_state('~/.cache/dein')
     " git plugin
     call dein#add('tpope/vim-fugitive')
     call dein#add('gregsexton/gitv')
-
-    "    " autocompletion
-    "    call dein#add('Shougo/deoplete.nvim')
-    "    " tmux autocompletion
-    "    call dein#add('wellle/tmux-complete.vim')
-    "    " Jedi autocompletion
-    "    call dein#add('zchee/deoplete-jedi')
-    "    " Clang autocompletion
-    "    call dein#add('zchee/deoplete-clang')
-    "    " java deoplete
-    "    call dein#add('artur-shaik/vim-javacomplete2')
-    "    " tabnine support
-    "    call dein#add('tbodt/deoplete-tabnine', {'build': './install.sh'})
-
-    " Autocompletion with Languages servers
-    "call dein#add('autozimu/LanguageClient-neovim', {'rev': 'next','build': './install.sh'})
-    "
 
     " Autocompletion with Languages servers and plugins
     call dein#add('neoclide/coc.nvim', { 'merged': 0, 'rev': 'release' })
@@ -94,24 +70,12 @@ if dein#load_state('~/.cache/dein')
     " webapi for gist-vim
     call dein#add( 'mattn/webapi-vim' )
     call dein#add( 'mattn/gist-vim' )
-    " You can specify revision/branch/tag.
-    "call dein#add('Shougo/deol.nvim', { 'rev': '01203d4c9'})
-
-    " better nginx config support
-    " call dein#add('chase/nginx.vim')
-    " call dein#add('chr4/nginx.vim')
 
     " go support"
     call dein#add('sebdah/vim-delve')
-    "all dein#add('stamblerre/gocode')
 
-    "auto read
-    "call dein#add('djoshea/vim-autoread')
     " hcl syntax
     call dein#add('fatih/vim-hclfmt')
-
-    " Flutter
-    call dein#add('thosakwe/vim-flutter')
 
     " syntax highlight plugins
     call dein#add('sheerun/vim-polyglot' )
@@ -125,6 +89,36 @@ if dein#load_state('~/.cache/dein')
     "call dein#add('othree/xml.vim') "xml support"
     "call dein#add('plasticboy/vim-markdown') "markdown plugins"
     "call dein#add('elzr/vim-json') "json support"
+    " better nginx config support
+    " call dein#add('chase/nginx.vim')
+    " call dein#add('chr4/nginx.vim')
+
+    "    " autocompletion
+    "    call dein#add('Shougo/deoplete.nvim')
+    "    " tmux autocompletion
+    "    call dein#add('wellle/tmux-complete.vim')
+    "    " Jedi autocompletion
+    "    call dein#add('zchee/deoplete-jedi')
+    "    " Clang autocompletion
+    "    call dein#add('zchee/deoplete-clang')
+    "    " java deoplete
+    "    call dein#add('artur-shaik/vim-javacomplete2')
+    "    " tabnine support
+    "    call dein#add('tbodt/deoplete-tabnine', {'build': './install.sh'})
+
+    " Autocompletion with Languages servers
+    "call dein#add('autozimu/LanguageClient-neovim', {'rev': 'next','build': './install.sh'})
+    "
+
+" for snipppes
+    "call dein#add('Shougo/neosnippet.vim')
+    "call dein#add('Shougo/neosnippet-snippets')
+    "" popular snippets
+    "call dein#add('honza/vim-snippets')
+
+    " Flutter
+    "call dein#add('thosakwe/vim-flutter')
+
 
     " Required:
     call dein#end()
