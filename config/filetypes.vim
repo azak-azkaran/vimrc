@@ -16,8 +16,14 @@ let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'sql', 'yaml']
 au BufNewFile,BufRead *.yaml set filetype=yaml.ansible
 
 " teat template files like yaml files
-au BufRead,BufNewFile *.yaml.j2       set filetype=yaml,yaml.ansible
-au BufRead,BufNewFile *.yml.j2       set filetype=yaml,yaml.ansible
+au BufRead,BufNewFile *.yaml.j2       set filetype=yaml.ansible
+au BufRead,BufNewFile *.yml.j2       set filetype=yaml.ansible
+au BufRead,BufNewFile */ansible/*.yml set filetype=yaml.ansible
+au BufRead,BufNewFile */ansible/*.yaml set filetype=yaml.ansible
+augroup ansible_vim_fthosts
+  autocmd!
+  autocmd BufNewFile,BufRead hosts setfiletype yaml.ansible
+augroup END
 
 au FileType xml setlocal foldmethod=syntax
 " to auto load and auto save folds
