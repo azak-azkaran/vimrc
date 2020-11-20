@@ -12,7 +12,7 @@ let g:neoformat_basic_format_trim = 1
 
 " Neomake auto linting
 " When writing a buffer (no delay).
-call neomake#configure#automake('w')
+call neomake#configure#automake('nrwi', 500)
 " auto open Neomake messages
 let g:neomake_open_list = 2
 

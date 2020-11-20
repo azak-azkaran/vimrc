@@ -10,5 +10,9 @@
     "javascriptreact",
     "typescript",
     "typescriptreact"
-  ]
+  ],
+  "yaml.schemas": {
+    "kubernetes": "/*.yaml"
+  },
+  "yaml.trace.server": "verbose"
 }
