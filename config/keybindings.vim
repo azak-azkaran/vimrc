@@ -1,9 +1,9 @@
 imap <C-L> <Esc>
 
 " deoplete tab-complete
-"inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-"inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-"inoremap <expr><C-Space> deoplete#manual_complete()
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr><C-Space> deoplete#manual_complete()
 
 " Toggle spell checking on and off with `,s`
 map <leader>s :set spell!<CR>

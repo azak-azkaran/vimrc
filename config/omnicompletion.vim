@@ -2,16 +2,15 @@
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#jedi#show_docstring = 1
 
-"let g:deoplete#sources#go#gocode_binary = '/home/andy/go/bin/gocode'
-"let g:LanguageClient_serverCommands = {
-"            \ 'go': ['gopls'],
-"            \ 'dart': ['dart','/usr/lib/dart/bin/snapshots/analysis_server.dart.snapshot','--lsp'],
-"            \ 'python': ['pyls'],
-"            \ 'yaml': ['yaml-language-server', '--stdio'],
-"            \ }
-"call deoplete#custom#option('smart_case', v:true)
-"
-"let g:LanguageClient_loggingFile = expand('~/LanguageClient.log')
+let g:deoplete#sources#go#gocode_binary = '/home/andy/go/bin/gocode'
+let g:LanguageClient_serverCommands = {
+            \ 'go': ['gopls'],
+            \ 'python': ['pyls'],
+            \ 'yaml': ['yaml-language-server', '--stdio'],
+            \ }
+call deoplete#custom#option('smart_case', v:true)
+
+let g:LanguageClient_loggingFile = expand('~/LanguageClient.log')
 
 "  omnifuncs
 set omnifunc=syntaxcomplete#Complete
