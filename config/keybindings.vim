@@ -70,3 +70,10 @@ map <F6> :TagbarToggle<CR>
 
 " starts terminal
 map <F7> :terminal<CR>
+
+" resziing
+nmap          <C-W>+     <C-W>+<SID>ws
+nmap          <C-W>-     <C-W>-<SID>ws
+nn <script>   <SID>ws+   <C-W>+<SID>ws
+nn <script>   <SID>ws-   <C-W>-<SID>ws
+nmap          <SID>ws    <Nop>
