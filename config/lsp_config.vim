@@ -19,6 +19,6 @@ augroup LSP
   autocmd!
   autocmd FileType go call SetLSPShortcuts()
   autocmd FileType yml,yaml call SetLSPShortcuts()
-  autocmd FileType py call SetLSPShortcuts()
+  autocmd FileType python call SetLSPShortcuts()
 augroup END
 
