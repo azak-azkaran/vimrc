@@ -43,7 +43,7 @@ if dein#load_state('~/.cache/dein')
     call dein#add('nathanaelkane/vim-indent-guides')
 
     " tmux integration
-    call dein#add('benmills/vimux')
+    call dein#add('preservim/vimux')
 
     " vim airline for design solarized for colors
     call dein#add('bling/vim-airline')
