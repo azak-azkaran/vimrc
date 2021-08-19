@@ -1,8 +1,10 @@
 " solarized
-set termguicolors
+"set termguicolors
 set background=dark
-colorscheme solarized8
+"colorscheme solarized8
+autocmd vimenter * ++nested colorscheme solarized8
 
+let g:solarized_use16=1
 
 " vim airline
 let g:airline#extensions#tabline#enabled = 1
