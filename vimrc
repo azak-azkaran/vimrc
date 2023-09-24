@@ -11,6 +11,7 @@ let g:python3_host_prog = expand('~/env/bin/python')
 " Required:
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 set runtimepath+=~/.fzf
+set runtimepath+=~/.vim/
 
 execute 'source' '~/.vimrc/init/plugins.vim'
 

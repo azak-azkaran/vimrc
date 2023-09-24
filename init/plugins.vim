@@ -1,133 +1,126 @@
 "
 """ PLUGINS
 "
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
 " Required:
-if dein#load_state('~/.cache/dein')
-    call dein#begin('~/.cache/dein')
+call plug#begin('~/.vim/autoload')
 
-    " Let dein manage dein
-    " Required:
-    call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 
-    " Dein update ui call with ":DeinUpdate"
-    call dein#add('wsdjeg/dein-ui.vim')
+" git plugin
+Plug 'tpope/vim-fugitive'
+Plug 'gregsexton/gitv'
 
-    call dein#add('scrooloose/nerdtree')
-    call dein#add('tpope/vim-surround')
-    call dein#add('tpope/vim-repeat')
+" Autocompletion with Languages servers and plugins
+"Plug 'neoclide/coc.nvim', { 'merged': 0, 'rev': 'release' }
 
-    " git plugin
-    call dein#add('tpope/vim-fugitive')
-    call dein#add('gregsexton/gitv')
+" fzf
+Plug 'junegunn/fzf.vim'
 
-    " Autocompletion with Languages servers and plugins
-    "call dein#add('neoclide/coc.nvim', { 'merged': 0, 'rev': 'release' })
+" tagbar using ctags
+Plug 'preservim/tagbar'
 
-    " fzf
-    call dein#add('junegunn/fzf.vim')
+" linting with neomake
+Plug 'neomake/neomake'
 
-    " tagbar using ctags
-    call dein#add('preservim/tagbar')
+" easer navigation in help files
+Plug 'dahu/vim-help'
 
-    " linting with neomake
-    call dein#add('neomake/neomake')
+" autoformater
+Plug 'sbdchd/neoformat'
 
-    " easer navigation in help files
-    call dein#add('dahu/vim-help')
+" colorfull indention
+Plug 'nathanaelkane/vim-indent-guides'
 
-    " autoformater
-    call dein#add('sbdchd/neoformat')
+" tmux integration
+Plug 'benmills/vimux'
 
-    " colorfull indention
-    call dein#add('nathanaelkane/vim-indent-guides')
+" vim airline for design solarized for colors
+Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
-    " tmux integration
-    call dein#add('preservim/vimux')
+" modern solarized with true color
+Plug 'lifepillar/vim-solarized8'
 
-    " vim airline for design solarized for colors
-    call dein#add('bling/vim-airline')
-    call dein#add('vim-airline/vim-airline-themes')
+" Plugin for indention json
+Plug 'bcicen/vim-jfmt'
 
-    " modern solarized with true color
-    call dein#add('lifepillar/vim-solarized8')
+" better start menue
+Plug 'mhinz/vim-startify'
 
-    " Plugin for indention json
-    call dein#add('bcicen/vim-jfmt')
+" support for nerd Font: https://github.com/ryanoasis/nerd-fonts
+Plug 'ryanoasis/vim-devicons'
 
-    " better start menue
-    call dein#add('mhinz/vim-startify')
+" add automatic pairs for ( / and stuff
+Plug 'jiangmiao/auto-pairs'
 
-    " support for nerd Font: https://github.com/ryanoasis/nerd-fonts
-    call dein#add('ryanoasis/vim-devicons')
+" kills buffer without closing window
+Plug  'qpkorr/vim-bufkill' 
 
-    " add automatic pairs for ( / and stuff
-    call dein#add('jiangmiao/auto-pairs')
+" webapi for gist-vim
+Plug  'mattn/webapi-vim' 
+Plug  'mattn/gist-vim' 
 
-    " kills buffer without closing window
-    call dein#add( 'qpkorr/vim-bufkill' )
+" go support"
+Plug 'sebdah/vim-delve'
 
-    " webapi for gist-vim
-    call dein#add( 'mattn/webapi-vim' )
-    call dein#add( 'mattn/gist-vim' )
+" hcl syntax
+Plug 'fatih/vim-hclfmt'
 
-    " go support"
-    call dein#add('sebdah/vim-delve')
+" syntax highlight plugins
+Plug 'sheerun/vim-polyglot' 
 
-    " hcl syntax
-    call dein#add('fatih/vim-hclfmt')
+" Syntax highlight plugins used by polyglot
+"call dein#add('dart-lang/dart-vim-plugin') "Flutter"
+"call dein#add('ekalinin/Dockerfile.vim') "Dockerfile"
+"call dein#add('fatih/vim-go') "go support""
+"call dein#add('cespare/vim-toml') "toml support"
+"call dein#add( 'pearofducks/ansible-vim') "ansible support""
+"call dein#add('othree/xml.vim') "xml support"
+"call dein#add('plasticboy/vim-markdown') "markdown plugins"
+"call dein#add('elzr/vim-json') "json support"
+" better nginx config support
+" call dein#add('chase/nginx.vim')
+" call dein#add('chr4/nginx.vim')
 
-    " syntax highlight plugins
-    call dein#add('sheerun/vim-polyglot' )
+" autocompletion
+Plug 'Shougo/deoplete.nvim'
+" tmux autocompletion
+Plug 'wellle/tmux-complete.vim'
+" Jedi autocompletion
+Plug 'zchee/deoplete-jedi'
+" Clang autocompletion
+Plug 'zchee/deoplete-clang'
+" java deoplete
+Plug 'artur-shaik/vim-javacomplete2'
+" tabnine support
+Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
 
-    " Syntax highlight plugins used by polyglot
-    "call dein#add('dart-lang/dart-vim-plugin') "Flutter"
-    "call dein#add('ekalinin/Dockerfile.vim') "Dockerfile"
-    "call dein#add('fatih/vim-go') "go support""
-    "call dein#add('cespare/vim-toml') "toml support"
-    "call dein#add( 'pearofducks/ansible-vim') "ansible support""
-    "call dein#add('othree/xml.vim') "xml support"
-    "call dein#add('plasticboy/vim-markdown') "markdown plugins"
-    "call dein#add('elzr/vim-json') "json support"
-    " better nginx config support
-    " call dein#add('chase/nginx.vim')
-    " call dein#add('chr4/nginx.vim')
-
-    " autocompletion
-    call dein#add('Shougo/deoplete.nvim')
-    " tmux autocompletion
-    call dein#add('wellle/tmux-complete.vim')
-    " Jedi autocompletion
-    call dein#add('zchee/deoplete-jedi')
-    " Clang autocompletion
-    call dein#add('zchee/deoplete-clang')
-    " java deoplete
-    call dein#add('artur-shaik/vim-javacomplete2')
-    " tabnine support
-    call dein#add('tbodt/deoplete-tabnine', {'build': './install.sh'})
-
-    " Autocompletion with Languages servers
-    call dein#add('autozimu/LanguageClient-neovim', {'rev': 'next','build': './install.sh'})
+" Autocompletion with Languages servers
+Plug 'autozimu/LanguageClient-neovim', {
+\ 'branch': 'next',
+\ 'do': 'bash install.sh',
+\ }
 
 
-    " for snipppes
-    call dein#add('Shougo/neosnippet.vim')
-    call dein#add('Shougo/neosnippet-snippets')
-    " popular snippets
-    call dein#add('honza/vim-snippets')
+" for snipppes
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
+" popular snippets
+Plug 'honza/vim-snippets'
 
-    " Flutter
-    "call dein#add('thosakwe/vim-flutter')
+" Flutter
+"call dein#add('thosakwe/vim-flutter')
 
 
-    " Required:
-    call dein#end()
-    call dein#save_state()
-endif
-
-" If you want to install not installed plugins on startup.
-if dein#check_install()
-    call dein#install()
-endif
+" Required:
+call plug#end()
 
 
