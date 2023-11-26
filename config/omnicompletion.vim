@@ -5,7 +5,7 @@ let g:deoplete#sources#jedi#show_docstring = 1
 let g:deoplete#sources#go#gocode_binary = '/home/andy/go/bin/gocode'
 let g:LanguageClient_serverCommands = {
             \ 'go': ['gopls'],
-            \ 'python': ['pyls'],
+            \ 'python': ['pylsp'],
             \ 'yaml': ['yaml-language-server', '--stdio'],
             \ }
 call deoplete#custom#option('smart_case', v:true)
